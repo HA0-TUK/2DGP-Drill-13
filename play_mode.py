@@ -29,6 +29,12 @@ def init():
 
     common.boy = Boy()
     game_world.add_object(common.boy, 1)
+    # 공 100개 랜덤 배치
+    balls = [Ball(random.randint(100, common.court.w - 100), 
+                  random.randint(100, common.court.h - 100)) 
+             for _ in range(100)]
+    game_world.add_objects(balls, 1)
+
 
 # 충돌 쌍 등록
 
