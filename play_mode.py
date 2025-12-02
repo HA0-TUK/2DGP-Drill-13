@@ -9,6 +9,7 @@ import common
 
 from boy import Boy
 from court import Court as Court
+from ball import Ball
 
 def handle_events():
     events = get_events()
@@ -29,6 +30,7 @@ def init():
     common.boy = Boy()
     game_world.add_object(common.boy, 1)
 
+# 충돌 쌍 등록
 
 def finish():
     game_world.clear()

@@ -146,4 +146,5 @@ class Boy:
         return self.x - 20, self.y - 50, self.x + 20, self.y + 50
 
     def handle_collision(self, group, other):
-        pass
+        if group == 'boy:ball':
+            pass  # 공이 사라지는 것은 ball.py에서 처리
