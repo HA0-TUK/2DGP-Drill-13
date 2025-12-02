@@ -34,9 +34,10 @@ def init():
                   random.randint(100, common.court.h - 100)) 
              for _ in range(100)]
     game_world.add_objects(balls, 1)
-
-
-# 충돌 쌍 등록
+    # 충돌 쌍 등록
+    game_world.add_collision_pair('boy:ball', common.boy, None)
+    for ball in balls:
+        game_world.add_collision_pair('boy:ball', None, ball)
 
 def finish():
     game_world.clear()
